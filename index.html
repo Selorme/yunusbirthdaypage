@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%; 
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .birthday-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .birthday-header img {
+            vertical-align: middle;
+            margin: 0 10px;
+        }
+        .birthday-header h1 {
+            margin: 0;
+        }
+        h1, h2, h3, h4, p {
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        ol, ul {
+            margin: 0 auto;
+            padding: 0;
+            list-style-position: inside;
+            text-align: left;
+        }
+        .reveal-content {
+            display: none;
+            margin-top: 20px;
+        }
+        .reveal-content img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            transition: opacity 0.5s ease;
+        }
+        .reveal-content h2 {
+            font-size: 24px;
+            color: #333;
+            margin: 10px 0 0;
+        }
+        .reveal-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 20px auto;
+        }
+        .reveal-button:hover {
+            background-color: #0056b3;
+        }
+        .birthday-footer {
+            margin-top: 20px;
+            padding-bottom: 50px; /* Added space at the bottom */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="birthday-header">
+            <img src="https://i.gifer.com/5edn.gif" alt="birthday gif"/>
+            <h1>IT'S YOUR BIRTHDAY</h1>
+            <img src="https://i.gifer.com/5edn.gif" alt="birthday gif"/>
+        </div>
+
+        <hr />
+
+        <h2>Yunus Emre Davutoğlu</h2>
+        <h4>(aka the blind Dolphin)</h4>
+
+        <h4>On this day-August 17th-25 years ago, your mom was probably wondering why she thought that night was fun. And there you came, a baby boy whose ears are in keen competition with...</h4>
+
+        <!-- Button 1 -->
+        <button class="reveal-button">Click Here</button>
+        <div class="reveal-content">
+            <img src="https://i.pinimg.com/564x/c4/03/6e/c4036ec214ffd263ef4e8ca2c0f000e3.jpg" alt="Jumbo, the elephant with the humongous ear"/>
+            <h2>🥳🥳🥳JUMBOOOOOO🥳🥳🥳</h2>
+        </div>
+
+        <h4>Now, there are a few other things you share with Jumbo apart from your ears.</h4>
+        <ol>
+            <li>Your beautiful brown eyes (yes, I know Jumbo has blue ones. Focus on the adjective "beautiful"!)</li>
+            <li>Your smile. That is a sight to behold.</li>
+            <li>Your cuteness.....</li>
+        </ol>
+
+        <h4>So, on this birthday that represents 25 fucking trips around the sun, I hope you get to:</h4>
+
+        <!-- Button 2 -->
+        <button class="reveal-button">Click Here</button>
+        <div class="reveal-content">
+            <img src="https://istanbulclues.com/wp-content/uploads/2018/11/Oz-Kilis-Kebap-ve-Lahmacun.jpg" alt="Turkish Kebap"/>
+            <h2>🥳🥳🥳eat a lot of KEBAAAAAPPPPPPPP🥳🥳🥳</h2>
+        </div>
+
+        <ol>
+            <li>Do all the things that make you happy.</li>
+            <li>Get a flower or two...</li>
+
+            <!-- Button 3 -->
+            <button class="reveal-button">Click Here</button>
+            <div class="reveal-content">
+                <img src="https://editablegifs.com/gif/flowers-for-you-gif/flowers-for-you-4.gif" alt="Flowers for you"/>
+                <h2>Flowers from me to you!</h2>
+            </div>
+
+            <li>Most importantly be as happy as you look in this picture:</li>
+            <center><iframe src="https://drive.google.com/file/d/1Ic58kxI6xPkiAoIZNp51Ja5-UUyvK6Lx/preview" width="300" height="400" allow="autoplay"></iframe></center>
+        </ol>
+
+        <h4>So go out there and live your best life🥳🥳🥳</h4>
+        <center><iframe src="https://drive.google.com/file/d/1JPFOvqpHujPXi2pvpMBMgXInCVOEYKHa/preview" width="600" height="270" allow="autoplay"></iframe></center>
+
+        <!-- The "İyi ki doğdun!!!" at the end -->
+        <div class="birthday-footer">
+            <h1>İYİ Kİ DOĞDUN!!!</h1>
+        </div>
+    </div>
+
+    <!-- Confetti Script -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+        // Confetti Effect on Page Load
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
+
+        // Button Reveal Logic
+        document.querySelectorAll('.reveal-button').forEach(function(button, index) {
+            button.addEventListener('click', function() {
+                const revealContent = document.querySelectorAll('.reveal-content')[index];
+                if (revealContent.style.display === 'none' || revealContent.style.display === '') {
+                    revealContent.style.display = 'block';
+                } else {
+                    revealContent.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
