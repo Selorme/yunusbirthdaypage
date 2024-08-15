@@ -148,7 +148,10 @@
         confetti({
             particleCount: 500,
             spread: 100,
-            origin: { y: 0.0 }
+            origin: { x: 0.5, y: 0.5 },
+            width: window.innerWidth,
+            height: window.innerHeight,
+            zIndex: 9999
         });
 
         // Button Reveal Logic
